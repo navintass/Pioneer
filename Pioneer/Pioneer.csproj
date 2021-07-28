@@ -54,6 +54,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
@@ -128,10 +129,16 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Class\DAO.cs" />
     <Compile Include="Controllers\GatewayController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Linq\Linq_db.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Linq_db.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\PioneerModel.Context.cs">
       <AutoGen>True</AutoGen>
@@ -181,6 +188,14 @@
     <Content Include="Models\PioneerModel.edmx.diagram">
       <DependentUpon>PioneerModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Linq\Linq_db.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Linq_db.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Linq\Linq_db.dbml.layout">
+      <DependentUpon>Linq_db.dbml</DependentUpon>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -209,7 +224,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Class\" />
     <Folder Include="Views\Gateway\" />
   </ItemGroup>
   <ItemGroup>
@@ -226,6 +240,7 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>

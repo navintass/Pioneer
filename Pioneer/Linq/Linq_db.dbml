@@ -1,0 +1,822 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="spdevorg_pioneer" Class="Linq_dbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=103.129.15.27;Initial Catalog=spdevorg_pioneer;User ID=spdev_pioneer" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="spdevorg_pioneerConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ACCOUNT_DELIVERY_SETTING" Member="ACCOUNT_DELIVERY_SETTINGs">
+    <Type Name="ACCOUNT_DELIVERY_SETTING">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopcode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ShopName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="LinkName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VAT_TYPE" Member="VAT_TYPEs">
+    <Type Name="VAT_TYPE">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BANK_TRANSFER" Member="BANK_TRANSFERs">
+    <Type Name="BANK_TRANSFER">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="detail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.BANK_TRANSFER_DETAIL" Member="BANK_TRANSFER_DETAILs">
+    <Type Name="BANK_TRANSFER_DETAIL">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Title_th" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Title_en" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="bank_account_name_th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="bank_account_name_en" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="brach_Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="brach_Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="account_number" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="status_defualt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cancel_SO" Member="Cancel_SOs">
+    <Type Name="Cancel_SO">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHANGESTOCK" Member="CHANGESTOCKs">
+    <Type Name="CHANGESTOCK">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShopID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="REF" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="FileExcel" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CHANGESTOCK_DETAIL" Member="CHANGESTOCK_DETAILs">
+    <Type Name="CHANGESTOCK_DETAIL">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Product_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type1" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COD" Member="CODs">
+    <Type Name="COD">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="detail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COD_DETAIL" Member="COD_DETAILs">
+    <Type Name="COD_DETAIL">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="shipper_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="df_start" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COUNTRY" Member="COUNTRies">
+    <Type Name="COUNTRY">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.COUNTRY_ALLOW" Member="COUNTRY_ALLOWs">
+    <Type Name="COUNTRY_ALLOW">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CUSTOMER" Member="CUSTOMERs">
+    <Type Name="CUSTOMER">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Social" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NationID" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Zipcode" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Saleroute" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ShopID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CUSTOMER_SETTING" Member="CUSTOMER_SETTINGs">
+    <Type Name="CUSTOMER_SETTING">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="new_customer_day" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="regular_customer_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lost_customer_order" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lost_customer_day" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DISCOUNT_TYPE" Member="DISCOUNT_TYPEs">
+    <Type Name="DISCOUNT_TYPE">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EMPLOYEE" Member="EMPLOYEEs">
+    <Type Name="EMPLOYEE">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="EmpName_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmpName_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ShopID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Address_en" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Address_th" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HTManage_Stock" Member="HTManage_Stocks">
+    <Type Name="HTManage_Stock">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.INVENTORY" Member="INVENTORies">
+    <Type Name="INVENTORY">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceCost" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PricePerUnit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="type1" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="refid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ref" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ref_detail_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MEMBER" Member="MEMBERs">
+    <Type Name="MEMBER">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="pwd" Type="System.String" DbType="NVarChar(15)" CanBeNull="true" />
+      <Column Name="MemberName_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="MemberName_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ShopID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="statusmember" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="roleid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MEMBER_STATUS" Member="MEMBER_STATUS">
+    <Type Name="MEMBER_STATUS">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAYMENT_MEDTHOD" Member="PAYMENT_MEDTHODs">
+    <Type Name="PAYMENT_MEDTHOD">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAYMENT_SETTING" Member="PAYMENT_SETTINGs">
+    <Type Name="PAYMENT_SETTING">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="df_bank_transfer" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="df_cod" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="auto_detect_slip" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAYMENT_SO" Member="PAYMENT_SOs">
+    <Type Name="PAYMENT_SO">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="so_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="payment_medthod_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="bank_transfer_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pay_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="pay_price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="account_number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="ref" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="cod_price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="price_total" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="sendEmail" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="slipimg" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAYMENT_STATUS" Member="PAYMENT_STATUS">
+    <Type Name="PAYMENT_STATUS">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PAYMENTTYPE" Member="PAYMENTTYPEs">
+    <Type Name="PAYMENTTYPE">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PO" Member="POs">
+    <Type Name="PO">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ProducerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShopID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProducerName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Zipcode" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Ref" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ShipperID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShipmentCost" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceTotal" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="COD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiscountType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Vat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VatType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="StatusPayment" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="po_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PO_STATUS" Member="PO_STATUS">
+    <Type Name="PO_STATUS">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShopID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCER" Member="PRODUCERs">
+    <Type Name="PRODUCER">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TaxID" Type="System.String" DbType="NVarChar(13)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Line" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Facebook" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="URLLink" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Detail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCT" Member="PRODUCTs">
+    <Type Name="PRODUCT">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Barcode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ShopID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Unit" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Weight" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Wide" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Long" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Height" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Detail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DetailTitle" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Track" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ProductGroupID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCT_PROP_DETAIL" Member="PRODUCT_PROP_DETAILs">
+    <Type Name="PRODUCT_PROP_DETAIL">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="ProductProperty_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCT_PROPERTY" Member="PRODUCT_PROPERTies">
+    <Type Name="PRODUCT_PROPERTY">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="product_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PRODUCTGROUP" Member="PRODUCTGROUPs">
+    <Type Name="PRODUCTGROUP">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CoverImage" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Detail" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Register" Member="Registers">
+    <Type Name="Register">
+      <Column Name="Ida" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RETRUN_SO" Member="RETRUN_SOs">
+    <Type Name="RETRUN_SO">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="so_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Return_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ROLES" Member="ROLEs">
+    <Type Name="ROLE">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.shipment_for_flat_rate" Member="shipment_for_flat_rates">
+    <Type Name="shipment_for_flat_rate">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="shipmenttype_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="country_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.shipment_for_flat_rate_detail" Member="shipment_for_flat_rate_details">
+    <Type Name="shipment_for_flat_rate_detail">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="shipper_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="df_start" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.shipment_for_unit" Member="shipment_for_units">
+    <Type Name="shipment_for_unit">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="shipmenttype_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.shipment_for_unit_detail" Member="shipment_for_unit_details">
+    <Type Name="shipment_for_unit_detail">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="unit_lowest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="unit_maximum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="saleprice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Shipper_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status_defualt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.shipment_for_weigth" Member="shipment_for_weigths">
+    <Type Name="shipment_for_weigth">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="shipmenttype_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.shipment_for_weigth_detail" Member="shipment_for_weigth_details">
+    <Type Name="shipment_for_weigth_detail">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="weigth_lowest" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="weigth_maximum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="saleprice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Shipper_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="status_defualt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SHIPMENT_FORMAT" Member="SHIPMENT_FORMATs">
+    <Type Name="SHIPMENT_FORMAT">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Shipment_setting" Member="Shipment_settings">
+    <Type Name="Shipment_setting">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="shipment_for_unit" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shipment_for_weigth" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shipment_for_flat_rate" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pattern_delivery_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="pattern_adr" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SHIPMENT_SO" Member="SHIPMENT_SOs">
+    <Type Name="SHIPMENT_SO">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="so_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shipper_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="delivery_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="shipment_format_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shop_address_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="receive_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="delivery_address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="province_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="province_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="district_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="district_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="sub_district_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sub_district_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="zipcode" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="remark" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Return_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SHIPMENT_TYPE" Member="SHIPMENT_TYPEs">
+    <Type Name="SHIPMENT_TYPE">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SHIPPER" Member="SHIPPERs">
+    <Type Name="SHIPPER">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LogoIMG" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="defualt_transport_price" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="status_defualt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SHOP" Member="SHOPs">
+    <Type Name="SHOP">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ShopCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ShopName_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="ShopName_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Detail_th" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Detail_en" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="id_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Logo" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Tax_status" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="tel_mobile" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="website" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="facebook_page" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="line" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="instagram" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SHOP_ADDRESS" Member="SHOP_ADDRESSes">
+    <Type Name="SHOP_ADDRESS">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SHOPID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="province_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="province_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="district_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="district_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="sub_district_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sub_district_name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="zipcode" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Latitude" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Longtitude" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="df_adr_shop" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="df_adr_bill" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="df_adr_delivery" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="df_adr_emsdropoff" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="df_adr_flashexpress" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="df_adr_kerryexpress" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="df_adr_jtexpress" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SHOP_POLICY" Member="SHOP_POLICies">
+    <Type Name="SHOP_POLICY">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SHOPID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Open_Stock" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Manage_Stock_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Productnegative" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="vat_type_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="caltransport" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paydestination" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="discount_it" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="noti_cancel_po" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="noti_tracking_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="noti_cancel_po_msg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="noti_cancel_tracking_number_msg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="noti_customer_msg" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SO" Member="SOs">
+    <Type Name="SO">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SoCode" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="ShopID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Social" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CustomerName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Zipcode" Type="System.String" DbType="NVarChar(5)" CanBeNull="true" />
+      <Column Name="PriceTotal" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Shipmenttype_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Shipper_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="paymentmedthod_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmployeeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="COD" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiscountType_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShipmentCost" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Vat" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="VatType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="so_status_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="payment_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="packing_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="receive_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="sale_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SO_DETAIL" Member="SO_DETAILs">
+    <Type Name="SO_DETAIL">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SOID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProductCode" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="Productname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PricePerUnit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Discount" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DiscountPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SO_LIST_SETTING" Member="SO_LIST_SETTINGs">
+    <Type Name="SO_LIST_SETTING">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="paid_balance_column" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="sale_staff_column" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="order_archive" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SO_SETTING" Member="SO_SETTINGs">
+    <Type Name="SO_SETTING">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="srch_adr_auto" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="force_addr_delivery" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="noti_slip_dup" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="noti_so_dup" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="calcel_so_status_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="success_so_status_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SO_STATUS" Member="SO_STATUS">
+    <Type Name="SO_STATUS">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShopID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MemberID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.STOCK" Member="STOCKs">
+    <Type Name="STOCK">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ShopID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceCost" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PricePerUnit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MinInventory" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PreOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Success_SO" Member="Success_SOs">
+    <Type Name="Success_SO">
+      <Column Name="IDA" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name_en" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Name_th" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="activestatus" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="memberid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="shopid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="create_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="update_date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
