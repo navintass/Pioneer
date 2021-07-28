@@ -63,17 +63,17 @@ namespace Pioneer.Class
                         db.SubmitChanges();
                     }
 
-                    //public void Getdata_byid(int id)
-                    //{
-                    //    datas = (from q in db.MEMBERs
-                    //             where q.IDA == id
-                    //             select q);
+                    public void Getdata_byid(int id)
+                    {
+                        datas = (from q in db.MEMBERs
+                                 where q.IDA == id
+                                 select q);
 
-                    //    foreach (MEMBER fields in datas)
-                    //    {
-                    //        AddDetails();
-                    //    }
-                    //}
+                        //foreach (MEMBER fields in datas.GetType().GetProperties())
+                        //{
+                        //    AddDetails();
+                        //}
+                    }
 
                 }
 
